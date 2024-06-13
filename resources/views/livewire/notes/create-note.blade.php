@@ -11,7 +11,6 @@ new class extends Component {
     public function submit()
     {
         $validated = $this->validate([
-
             'noteTitle' => ['required', 'string', 'min:5'],
             'noteBody' => ['required', 'string', 'min:20'],
             'noteRecipient' => ['required', 'email'],
@@ -38,7 +37,7 @@ new class extends Component {
         <x-input icon="calendar" wire:model="noteSendDate" type="date" label="Send date" />
         <div class="pt-4">
             <x-errors />
-            <x-button wire:click="submit" primary right-icon="calendar" spinner class="mt-4">Schedule note</x-button>
+            <x-button type="submit" primary right-icon="calendar" spinner class="mt-4">Schedule note</x-button>
         </div>
     </form>
 </div>
